@@ -13,8 +13,11 @@ task :senddaily do
   #call the send text method on that instance
 
   joke = Jokes.new
-  start = 56
-  amount = 3
+  File.open("jokenumber.txt") do |file|
+    start = file.gets
+  end
+  start = 63
+  amount = 1
   start.upto(start+amount-1) do |x|
     jokereturn = x.even? ? joke.country_jokes(x) : joke.mama_jokes(x)
     if jokereturn.length >= 1600
@@ -23,4 +26,6 @@ task :senddaily do
     text = Message.new(jokereturn)
     text.send_text
   end
+  File.truncate('jokenumber.txt', 'w') {|file| file.truncate(0) }
+  File.open("jokenumber.txt", "a+") {|f| f.print "#{start+amount}\n" }
 end
