@@ -5,3 +5,7 @@ IT CAN TEXT YOU JOKES. FROM THE INTERNET. ENJOY. I THINK IT'S STRAIGHTFORWARD. H
 XOXO, 
 
 GOSSIP GIRL
+
+
+
+9qw0ujsd;iuhfawiosaek'peiojhfj'opwa'htbousjs
