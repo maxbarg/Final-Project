@@ -13,10 +13,10 @@ task :senddaily do
   #call the send text method on that instance
 
   joke = Jokes.new
+  start = 0
   File.open("jokenumber.txt") do |file|
-    start = file.gets
+    start = file.gets.to_i
   end
-  start = 65
   amount = 1
   start.upto(start+amount-1) do |x|
     jokereturn = x.even? ? joke.country_jokes(x) : joke.mama_jokes(x)

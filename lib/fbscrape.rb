@@ -49,7 +49,7 @@ class Jokes
     joke_x_html = open(countryjokes_list.css("a")[x]['href'])
     joke_x_doc = Nokogiri::HTML(joke_x_html)
     joke_x = joke_x_doc.css(".content_wrap p").text.to_s
-    "#{x.to_i + 1} : #{joke_x}"
+    "#{x.to_i} : #{joke_x}"
   end
 
   def mama_jokes(x)
@@ -62,7 +62,7 @@ class Jokes
     joke_y_html = open(mamajokes_list.css("a")[x]['href'])
     joke_y_doc = Nokogiri::HTML(joke_y_html)
     joke_y = joke_y_doc.css(".content_wrap p").text.to_s
-    "#{x.to_i + 1} : #{joke_y}"
+    "#{x.to_i} : #{joke_y}"
   end
 
 end
