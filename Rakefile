@@ -16,7 +16,7 @@ task :senddaily do
   File.open("jokenumber.txt") do |file|
     start = file.gets
   end
-  start = 63
+  start = 65
   amount = 1
   start.upto(start+amount-1) do |x|
     jokereturn = x.even? ? joke.country_jokes(x) : joke.mama_jokes(x)
@@ -26,6 +26,5 @@ task :senddaily do
     text = Message.new(jokereturn)
     text.send_text
   end
-  File.truncate('jokenumber.txt', 'w') {|file| file.truncate(0) }
-  File.open("jokenumber.txt", "a+") {|f| f.print "#{start+amount}\n" }
+  File.open("jokenumber.txt", "w") {|f| f.print "#{start+amount}\n" }
 end
