@@ -8,4 +8,4 @@ GOSSIP GIRL
 
 
 
-9qw0ujsd;iuhfawiosaek'peiojhfj'opwa'htbousjs
+jenny dont touch my shit
